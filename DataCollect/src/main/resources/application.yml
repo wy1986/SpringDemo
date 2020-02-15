@@ -1,0 +1,23 @@
+server:
+  port: 8081
+
+spring:
+  profiles:
+    active: pro
+  application:
+    name: BillonDataCollect
+
+kafka:
+  bootstrap-servers: 192.168.101.251:9092
+  consumer:
+    group-id: mygrou
+
+---
+server:
+  port: 8082
+  profiles: dev
+
+---
+server:
+  port: 8083
+  profiles: pro
